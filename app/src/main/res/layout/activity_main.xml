@@ -11,40 +11,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+
+        app:layout_constraintBottom_toTopOf="@+id/btnLayout"
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <TextView
-            android:id="@+id/inputNumber"
+        <EditText
+            android:id="@+id/txtInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="@color/white"
             android:clickable="false"
-            android:focusable="true"
-            android:scrollHorizontally="true"
             android:cursorVisible="true"
-            android:verticalScrollbarPosition="right"
-
+            android:focusable="true"
+            android:padding="5dp"
             android:paddingTop="10dp"
+            android:scrollHorizontally="true"
+            android:text=""
+
             android:textAlignment="viewEnd"
+            android:textColor="@color/white"
             android:textSize="50sp"
             android:textStyle="bold"
-            android:padding="5dp"/>
+            android:verticalScrollbarPosition="right" />
 
-        <TextView
-            android:id="@+id/result"
+        <EditText
+            android:id="@+id/txtResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textColor="#D1CECE"
-            android:ellipsize="end"
             android:clickable="false"
+            android:ellipsize="end"
             android:focusable="false"
+            android:padding="10dp"
+            android:text=""
             android:textAlignment="viewEnd"
+            android:textColor="#D1CECE"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:padding="10dp"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -187,7 +189,7 @@
             android:layout_weight="1">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnCancel"
+                android:id="@+id/btnBackSpace"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:background="@drawable/ripple"
@@ -283,17 +285,18 @@
                 android:background="@drawable/ripple"
                 android:gravity="center"
                 />
+
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnPlus"
+                android:id="@+id/btnAdd"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:text="+"
-                android:textStyle="bold"
-                android:textSize="30sp"
-                android:textColor="@color/white"
                 android:background="@drawable/ripple"
                 android:gravity="center"
-                />
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnEqual"
                 android:layout_width="match_parent"
